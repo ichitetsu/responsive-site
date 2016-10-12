@@ -107,13 +107,21 @@ header{
   background-position:center center;
   background-size:cover;
   position:relative;
-  height:1500px;
+  height:500px;
   h1{
     position:absolute;
     top:20%;
     left:5%;
-  }
+    @media(max-width: 768px){
+  height:auto;
+  width:auto;
 }
+  }
+  @media(max-width: 768px){
+  height:250px;
+}
+}
+
 
 
 
@@ -139,12 +147,20 @@ section {
   .container {
     @include display-flex;
     justify-content: space-between;
+      .skill-box{
+  margin:40px;
+      }
   }
+  
 @media (max-width: 768px){
   .container{
     flex-direction:column;
+    width:auto;
   }
 }
+
+
+
   h2 {
     color: $baseColor; 
     margin-bottom: 60px;
